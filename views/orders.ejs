@@ -1,0 +1,93 @@
+<% include partials/header %>
+
+       
+
+   
+
+<!--<body>-->
+
+<div class="container-orders" style="margin-top: 50px">
+        <div class="row">
+            <div class="col-lg-12 orders-title">
+                <h3>Existing orders</h3>
+            </div>
+        </div>
+        
+
+
+        <!--<div class="container">
+            <div class="row">-->
+
+                <table id="example" class="table table-sm table-hover table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th data-priority="2">Order ID</th>
+                            <th data-priority="1">Order Date</th>
+                            <th data-priority="2">Rep Name</th>
+                            <th data-priority="1">Customer</th>
+                            <th data-priority="2">Principal</th>
+                            <th data-priority="1">Amount</th>
+                            <th data-priority="3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% orders.forEach(function(orders) { %>
+                            <div>
+                                
+                                <tr>
+                                        <td>
+                                            <%= orders._id %>
+                                            
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <%= orders.date %>
+                                        </td>
+                                        <td>
+                                            <%= orders.representative %>
+                                        </td>
+                                        <td>
+                                            <%= orders.customer %>
+                                        </td>
+                                        <td>
+                                            <%= orders.principal %>
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <%= orders.amount %>
+                                        </td>
+                                        <td style="text-align:center;"> 
+                                            <a href="/orders/<%= orders._id %>">Details</a>
+                                        </td>
+                                </tr>
+                            </div>
+                            <% }); %>
+                    </tbody>
+                </table>
+    </div>
+    
+<script>
+    //document.querySelector('.container-orders table').style.display = 'none';
+    document.querySelector('.container-orders').classList.add('spinner-3');
+</script> 
+    
+<!--</body>-->
+
+<!-- FOUND THE FOLLOWING SCRIPT TO MAKE ENTIRE TABLE ROW A CLICKABLE href LINK AT https://www.electrictoolbox.com/jquey-make-entire-table-row-clickable/ -->
+<script>
+
+    $(document).ready(function() {
+
+    $('#example tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
+    });
+
+});
+    
+</script>
+
+
+
+
+<% include partials/footer %>

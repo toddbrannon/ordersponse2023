@@ -1,0 +1,67 @@
+<% include partials/header %>
+
+
+
+<div class = "container">
+        <div class = "row">
+            <div style="width: 30%; margin: 25px auto;">
+                <form action="/orders/<%= order._id %>?_method=PUT" method="POST">
+                            <h1 style="text-align: center;">Edit Order ID <%= order._id %></h1>
+                            <table class="new_order">
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>
+                                        <input type='text' name="order[date]" class="form-control" id='datetimepicker' value="<%= order.date %>"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Customer:</td>
+                                    <td><input type="text" name="order[customer]" class="form-control" value="<%= order.customer %>"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Principal:</td>
+                                    <td><input type="text" name="order[principal]" class="form-control" value="<%= order.principal %>"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Territory:</td>
+                                    <td><input type="text" name="order[territory]" class="form-control" value="<%= order.territory %>"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Sales Rep:</td>
+                                    <td><input type="text" name="order[representative]" class="form-control" value="<%= order.representative %>"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Location:</td>
+                                    <td><input type="text" name="order[loc]" class="form-control" value="<%= order.loc %>"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Cost:</td>
+                                    <td><input type="text" name="order[cost]" class="form-control" value="<%= order.cost %>"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td><input type="text" name="order[amount]" class="form-control" value="<%= order.amount %>"/></td>
+                                </tr>
+                            </table>
+                            <div class = "form-group">
+                                <button class="btn btn-lg btn-default btn-primary btn-block">Save Changes</button>
+                            </div>
+
+                    <div>
+                        <a href="/orders/<%= order._id %>">Back</a>
+                    </div>
+                    <div>
+                        <a href="/orders">Back to Orders</a>
+                    </div>
+                    <div>
+                        <a href="/">Back to Main</a>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+<% include partials/footer %>

@@ -1,0 +1,70 @@
+<% include partials/header %>
+
+    <div class="container container-edit py-5">
+        <div class="row">
+            <div class="col-lg-12 orders-title">
+                <h2>Deleting Order ID
+                    <%= order._id %>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <form method="DELETE">
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="inputDate">Date</label>
+                            <!--<input type="text" name="order[date]" class="form-control" id='datetimepicker' value="<%= order.date %>">-->
+                            <input class="form-control" id="date" name="date" value="<%= order.date %>" type="text" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="inputTerritory">Territory</label>
+                            <select id="selectTerr" name="order[territory]" class="form-control">
+                            <option><%= order.territory %></option>
+                        </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="inputPrincipal">Principal</label>
+                            <select id="selectPrin" name="order[principal]" class="form-control">
+                            <option><%= order.principal %></option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                            <label for="inputCustomer">Customer</label>
+                            <select id="selectCust" name="order[customer]" class="form-control">
+                            <option><%= order.customer %></option>
+                        </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="inputRepresentative">Sales Rep</label>
+                            <select id="selectRep" name="order[representative]" class="form-control">
+                            <option><%= order.representative %></option>
+                        </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="inputState">Total</label>
+                            <input type="text" name="order[total]" class="form-control" id="inputTotal" value="<%= order.amount %>">
+                        </div>
+                    </div>
+                    <div class="new-buttons">
+                        <a href="/orders/<%= order._id %>" class="btn btn-default btn-primary px-4 float-right">Cancel</a>
+                        <!--<button type="button" class="btn btn-cancel btn-default btn-primary px-4">Cancel</button>-->
+                        <button type="submit" class="btn btn-submit btn-default btn-primary px-4">Delete</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div class="row row-back">
+            <div class="col-lg-12 orders-title">
+                <a href="/">Back to Main </a> | <a href="/orders"> Back to Orders</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <% include partials/footer %>

@@ -1,0 +1,109 @@
+<% include partials/header %>
+
+<h1>Edit an Order</h1>
+
+    <!--<div class = "container">
+        <div class = "row">
+            <h1 style="text-align: center;">New Order v1</h1>
+            <div style="width: 30%; margin: 25px auto;">
+                <form action="/customers" method="POST">
+                    
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="customer" placeholder="<%= order.date %>">
+                            </div>
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="principal" placeholder="principal">
+                            </div>
+ 
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="territory" placeholder="territory">
+                            </div>
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="location" placeholder="location">
+                            </div>
+                            
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="representative" placeholder="representative">
+                            </div>
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="cost" placeholder="cost">
+                            </div>
+                            <div class = "form-group">
+                                <input class="form-control" type="text" name="amount" placeholder="amount">
+                            </div>
+
+                            <div class = "form-group">
+                                <button class="btn btn-lg btn-default btn-primary btn-block">Submit</button>
+                            </div>
+                            
+                            <br><br>
+                            
+                            
+                            <h1 style="text-align: center;">New Order v2</h1>
+                            <table class="new_order">
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Customer:</td>
+                                    <td><input type="text" name="customer" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Principal:</td>
+                                    <td><input type="text" name="principal" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Territory:</td>
+                                    <td><input type="text" name="territory" class="form-control" /></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Representative:</td>
+                                    <td><span style="color: red !important; display: inline; float: none;">*</span>
+                                        <select id="representative" name="representative" class="form-control">
+                                            <ul class="representative">
+                                                <% Representative.forEach(function(Representative) { %>
+                                                <option><%= Representative.Name %></option>
+                                                <% }) %>
+                                            </ul>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Cost:</td>
+                                    <td><input type="text" name="cost" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td><input type="text" name="amount" class="form-control" /></td>
+                                </tr>
+                            </table>
+                            <div class = "form-group">
+                                <button class="btn btn-lg btn-default btn-primary btn-block">Submit</button>
+                            </div>
+
+                    <a href="/">Back to Main</a>
+                </form>
+            </div>
+            
+        </div>
+    </div>-->
+    
+    
+    
+
+
+<% include partials/footer %>

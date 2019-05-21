@@ -1,0 +1,32 @@
+
+
+<% include partials/header %>
+
+<div class = "container">
+        <div class = "row">
+            <h1 style="text-align: center;">Order ID <%= order._id %></h1>
+            <div style="width: 30%; margin: 25px auto;">
+            <p>Order Date : <%= order.date %></p>
+            <p>Sales Rep: <%= order.representative %></p>
+            <p>Location Code: <%= order.loc %></p>
+            <p>Customer: <%= order.customer %></p>
+            <p>Principal: <%= order.principal %></p>
+            <p>Territory: <%= order.territory %></p>
+            <p>Cost: <%= order.cost %></p>
+            <p>Commission: <%= order.commission %></p>
+            <p>Amount: <%= order.amount %></p>
+            <p>
+               <!--<a class="btn btn-lg btn-default btn-primary btn-block" href="#">Edit</a>-->
+               <a href="/orders/<%= order._id %>/edit" class="btn btn-lg btn-default btn-primary btn-block">Edit</a>
+            </p>
+
+            <p><a href="/orders">Back</a></p>
+             
+
+            </div>
+            
+        </div>
+</div>
+
+<% include partials/footer %>
+

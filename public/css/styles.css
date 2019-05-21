@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Arimo|Arsenal|Caveat|Days+One|Economica|Exo|Gochi+Hand|Harmattan|Kalam|Kaushan+Script|Lato|Mr+Dafoe|Orienta|Oswald|Pavanam|Permanent+Marker|Raleway|Roboto|Roboto+Condensed|Satisfy|Source+Sans+Pro');
+
+/*Spinner-1*/
+
+.spinner-1:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    border-top-color: coral;
+    animation: spinner 0.7s linear infinite;
+}
+
+
+/*Spinner-2*/
+
+.spinner-2:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: coral;
+    border-bottom-color: coral;
+    animation: spinner 0.7s ease infinite;
+}
+
+
+/*Spinner-3*/
+
+.spinner-3:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border-top: 5px solid #F2A71E;
+    border-right: 5px solid transparent;
+    animation: spinner 0.7s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background: #000;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: #262626;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+header .logo {
+    font-family: "Economica", sans-serif;
+    color: #fff !important;
+    height: 50px;
+    line-height: 50px;
+    font-size: 28px;
+    float: left;
+    font-weight: bold;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-jumbo .logo {
+    font-family: "Lato", sans-serif;
+    font-size: 3.0em;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    background: #2196f3;
+    text-decoration: none;
+}
+
+header nav ul li a .current {
+    color: #fff;
+    background: #2196f3;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    height: 50px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar {
+    margin-top: 0;
+    height: 60px;
+    /*background-color: rgba(124,127,131,.2) !important;*/
+    opacity: .9;
+    border-bottom: 2px solid rgba(0, 105, 217, .5);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .5);
+    position: sticky;
+    top: 0;
+}
+
+.navbar-nav li {
+    padding-left: 10px;
+}
+
+.navbar a {
+    color: #0069D9;
+}
+
+.navbar-collapse {
+    background-color: inherit;
+}
+
+
+/*a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}*/
+
+.jumbotron {
+    background: #fff !important;
+    /*background-color: rgba(124,127,131,.0);*/
+    margin-top: 75px;
+    /*border: 1px solid rgba(73,78,83,.2);
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4);*/
+    text-align: center;
+}
+
+.container-jumbo {
+    width: 75%;
+    margin: auto;
+}
+
+.container-orders {
+    width: 90%;
+    margin: 100px auto;
+    /*padding: 50px !important;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;*/
+}
+
+.orders-title {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.search-section {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.search-form {
+    margin: auto 0;
+}
+
+.search-form .form-group {
+    margin-top: 14px;
+}
+
+.btn {
+    margin: 8px;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/*table {
+    border-spacing: 0 10px !important;
+    margin-bottom: 10px;
+}*/
+
+tr th {
+    text-align: center;
+}
+
+tr td {
+    line-height: 50px;
+}
+
+td {
+    padding: 4px !important;
+}
+
+input {
+    display: block !important;
+    margin: 0 auto;
+}
+
+#myTable a {
+    color: #1da1f2 !important;
+    text-decoration: none !important;
+}
+
+#myTable a:hover {
+    color: #3fffaa !important;
+}
+
+.login-panel {
+    width: 300px !important;
+}
+
+.login-panel a {
+    color: #0275d8 !important;
+}
+
+.container-new a,
+.container-edit a {
+    text-decoration: none !important;
+}
+
+.container-edit .btn {
+    color: #fff !important;
+}
+
+.row-back {
+    margin-top: 2em;
+}
+
+.submit {
+    width: 100%;
+}
+
+
+/* NEW ORDER & EDIT PAGES */
+
+.container-new,
+.container-edit {
+    margin-top: 75px;
+}
+
+.new-col-a,
+.new-col-b {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+.new-buttons {
+    float: right;
+}
+
+.new-buttons .btn {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.new-buttons .btn-cancel {
+    background-color: #fe8d00 !important;
+    border-color: #fe8d00 !important;
+    ;
+}
+
+
+/* SEARCH BOX on ORDERS page */
+
+#myInput {
+    width: 100%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+}
+
+
+/* DELETE MODAL STYLING */
+
+.modal-confirm {
+    color: #636363;
+    width: 400px;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 10px 0 -10px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+
+.modal-confirm .modal-body {
+    color: #999;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+    color: #999;
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+    outline: none !important;
+}
+
+.modal-confirm .btn-info {
+    background: #c1c1c1;
+}
+
+.modal-confirm .btn-info:hover,
+.modal-confirm .btn-info:focus {
+    background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+
+.modal-confirm .btn-danger:hover,
+.modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+
+.modal-title {
+    margin: auto 20px;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+
+/*============================================================*/
+
+
+/*.btn-submit {
+    float: right;
+}*/
+
+
+/*@media (max-width: 991px) {
+    header {
+        padding: 0 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        display: none;
+    }
+}*/
+
+@media (max-width: 900px) {
+    .form-control {
+        font-size: .95em !important;
+        display: block;
+        width: 80%;
+    }
+    .form-group.search-box {
+        border: 2px solid #000;
+    }
+    input,
+    select {
+        border-radius: 5px !important;
+    }
+    .login-panel {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin-top: 100px !important;
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .container label {
+        margin-top: 10px !important;
+        margin-bottom: 4px !important;
+    }
+    .container .form-group {
+        margin-bottom: 14px;
+    }
+    .container .new-buttons {
+        margin-top: 14px;
+    }
+    .btn {
+        margin: 8px;
+    }
+    .navbar {
+        z-index: 99;
+        opacity: 1.0;
+        margin-right: 0;
+    }
+    .navbar-brand {
+        display: none !important;
+    }
+    a {
+        font-size: .95em !important;
+    }
+    .btn-login {
+        font-size: .95em !important;
+    }
+    .form-control {
+        font-size: .95em !important;
+        display: block;
+        width: 100%;
+    }
+    .form-group.search-box {
+        border: 2px solid #000;
+    }
+    input,
+    select {
+        border-radius: 5px !important;
+    }
+    .jumbotron {
+        margin-top: 7em;
+    }
+    .container-jumbo {
+        width: 100%;
+    }
+    .login-panel {
+        width: 60% !important;
+    }
+    th,
+    td {
+        font-size: .95em !important;
+    }
+}
+
+*/

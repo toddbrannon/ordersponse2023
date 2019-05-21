@@ -1,0 +1,130 @@
+<% include partials/header %>
+
+
+    <!--<div class = "container">
+        <div class = "row">
+            <h1 style="text-align: center;">New Order v1</h1>
+            <div style="width: 40%; margin: 25px auto;">
+                <form action="/customers" method="POST">
+
+                            <table class="new_order">
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>
+
+                                            <input type='text' name="date" class="form-control" id='datetimepicker' />
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Customer:</td>
+                                    <td><input type="text" name="customer" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Principal:</td>
+                                    <td><input type="text" name="principal" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Territory:</td>
+                                    <td><input type="text" name="territory" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Sales Rep:</td>
+                                    <td><input type="text" name="representative" class="form-control"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Location:</td>
+                                    <td><input type="text" name="loc" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Cost:</td>
+                                    <td><input type="text" name="cost" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td><input type="text" name="amount" class="form-control" /></td>
+                                </tr>
+                            </table>
+                            <div class = "form-group">
+                                <button class="btn btn-lg btn-default btn-primary btn-block">Submit</button>
+                            </div>
+
+                    <a href="/">Back to Main</a>
+                </form>
+            </div>
+            
+        </div>
+    </div>-->
+    
+    <div class = "container-new">
+        <div class = "row">
+            <div class="col-lg-12 orders-title">
+                <h3>New Order</h3>
+            </div>
+        </div>
+            <div style="width: 90%; margin: 10px auto;">
+                <form action="/customers" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 new-col-a">
+                            <table class="new_order">
+                                <tr>
+                                    <td>Date:</td>
+                                    <td>
+                                        <input type='text' name="date" class="form-control" id='datetimepicker' />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Customer:</td>
+                                    <td><input type="text" name="customer" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Principal:</td>
+                                    <td><input type="text" name="principal" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Territory:</td>
+                                    <td><input type="text" name="territory" class="form-control" /></td>
+                                </tr>  
+                            </table>
+                        </div>
+                    
+                        <div class="col-md-6 new-col-b">
+                            <table class="new_order">
+                                <tr> 
+                                    <td>Sales Rep:</td>
+                                    <td><input type="text" name="representative" class="form-control"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Location:</td>
+                                    <td><input type="text" name="loc" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Cost:</td>
+                                    <td><input type="text" name="cost" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td><input type="text" name="amount" class="form-control" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <div class = "form-group">
+                                <button class="btn btn-lg btn-default btn-primary btn-block">Submit</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    <a href="/">Back to Main</a>
+                </form>
+            </div>
+    </div>
+  
+    
+
+
+<% include partials/footer %>

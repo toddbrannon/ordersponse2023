@@ -1,0 +1,123 @@
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/css/footable.bootstrap.min.css">
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
+    <script type="text/javascript" src="/js/footable.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
+
+    <title>TruSponseWPI</title>
+    
+    <script>
+        $(function(){
+            $('a').each(function(){
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
+    
+    
+    
+</head>
+
+<body class="page-fontawesome">
+    
+    
+    
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">TruSponse</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="main-nav">
+                
+                <ul class="nav navbar-nav ml-auto px-5">
+                <% if(!currentUser){ %>
+                    <li class="nav-item"><a class="nav-link" href="/login">Log in</a></li>
+                    <% } else { %>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color:#FFA500;">Logged in as <%= currentUser.username %></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Main</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/orders/new">New Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/orders">View Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Sign Out</a></li>
+                        <% } %>
+                </ul>
+                
+            </div>
+            
+        </nav>
+        
+        <!--<nav>
+            <h2 class="logo"><a href="/">TruSponse</a></h2>
+            <div class="toggle"><i class="fa fa-bars menu" aria-hidden="true"></i></div>
+            <ul>
+                <% if(!currentUser){ %>
+                    <li><a href="/login">Log in</a></li>
+                    <% } else { %>
+                        <li><a href="#">Logged in as <%= currentUser.username %></a></li>
+                        <li><a href="/">Main</a></li>
+                        <li><a href="/orders/new">New Order</a></li>
+                        <li><a href="/orders">View Orders</a></li>
+                        <li><a href="/logout">Sign Out</a></li>
+                        <% } %>
+            </ul>
+        </nav>-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.menu').click(function(){
+                    $('ul').toggleClass('active');
+                })
+            })
+        </script>
+
+        <script language="javascript" type="text/javascript">
+            $(window).load(function() {
+            document.querySelector('.container-orders').classList.remove('spinner-3');
+            //document.querySelector('.container-orders table').style.display = 'table';
+        });
+        </script>
+        
+    </div>
+    
+    </div>
+    
+        
+ 
+    
+    <!-- Flash messages -->
+    
+    <div class="container" style="margin-top: 70px">
+    <% if(error && error.length > 0) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+    <% if(success && success.length > 0) { %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+    <% } %>
+    </div>
+
+    
+    

@@ -1,0 +1,70 @@
+<% include partials/header %>
+
+    <div class="container container-edit" style="margin-top: 150px">
+        <div class="row">
+            <div class="col-lg-12 orders-title">
+                <h4>Updating Order ID
+                    <%= order._id %>
+                </h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <form action="/orders/<%= order._id %>?_method=PUT" method="POST">
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="inputDate">Date</label>
+                            <!--<input type="text" name="order[date]" class="form-control" id='datetimepicker' value="<%= order.date %>">-->
+                            <input class="form-control" id="date" name="order[date]" value="<%= order.date %>" type="text" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="inputTerritory">Territory</label>
+                            <select id="selectTerr" name="order[territory]" class="form-control">
+                            <option><%= order.territory %></option>
+                        </select>
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="inputPrincipal">Principal</label>
+                            <select id="selectPrin" name="order[principal]" class="form-control">
+                            <option><%= order.principal %></option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                            <label for="inputCustomer">Customer</label>
+                            <select id="selectCust" name="order[customer]" class="form-control">
+                            <option><%= order.customer %></option>
+                        </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="inputRepresentative">Sales Rep</label>
+                            <select id="selectRep" name="order[representative]" class="form-control">
+                            <option><%= order.representative %></option>
+                        </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="inputState">Total</label>
+                            <input type="text" name="order[amount]" class="form-control" id="inputTotal" value="<%= order.amount %>">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 new-buttons" style="text-align: center;">
+                        <a class="btn btn-default btn-info px-4" href="/orders/<%= order._id %>"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+                        <button type="submit" class="btn btn-submit btn-default btn-success px-4"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i></button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div class="row row-back">
+            <div class="col-lg-12 orders-title">
+                <!--<a href="/">Back to Main </a> | <a href="/orders"> Back to Orders</a>-->
+            </div>
+        </div>
+
+    </div>
+
+
+    <% include partials/footer %>
