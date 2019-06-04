@@ -1,5 +1,5 @@
-config
-node_modules
+config/
+node_modules/
 Orders_db_seed.json
 convertcsv.json
 seeds.js

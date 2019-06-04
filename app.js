@@ -6,11 +6,11 @@ var express                 = require("express"),
     passport                = require("passport"),
     LocalStrategy           = require("passport-local"),
     passportLocalMongoose   = require("passport-local-mongoose"),
-    methodOverride          = require("method-override"),
-    seedDB                  = require("./seeds");
+    methodOverride          = require("method-override");
+ //   seedDB                  = require("./seeds");
     
 
-seedDB();
+//seedDB();
 
 /*let i = 1;
 setTimeout(function run() {
@@ -19,8 +19,8 @@ setTimeout(function run() {
 }, 60000);*/
 
 // Requiring Routes ============================================================
-var ordersRoutes            = require("./routes/orders"),
-    indexRoutes             = require("./routes/index");
+const ordersRoutes              = require("./routes/orders");
+const indexRoutes                 = require("./routes/index");
     
 // Load Keys ===================================================================
 const keys                  = require('./config/keys');    
