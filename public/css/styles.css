@@ -228,6 +228,80 @@ a:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* CHARTS VIEW */
+.container-charts {
+    margin-top: -70px;  
+}
+
+.orders-title {
+    color: rgba(73,78,84,0.9) !important;
+}
+
+.card-chart {
+    background-color: #fff;
+    border-radius: 10px !important;
+    color: #05386B;
+    min-height: 275px;
+    padding-top: 1em;
+    border: rgba(73,78,84,0.3) solid 1px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.boxes {
+    padding-left:2em;
+    padding-right:2em;
+    padding-bottom:2em;
+}
+
+.bi-side {
+    background: rgba(73,78,84,0.5);
+    color: rgba(73,78,84,1.0) !important;
+    padding-top: 2em;
+    padding-right: 0 !important;
+}
+
+.bi-side h2 {
+    text-align: center;
+    border-bottom:rgba(73,78,84,0.5) solid 1px !important;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.bi-side ul {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+.bi-side li {
+    border-bottom:rgba(73,78,84,0.5) solid 1px !important;
+    padding-left: 3em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.bi-side li:hover {
+    border-bottom:rgba(73,78,84,0.5) solid 1px !important;
+    background:rgba(73,78,84,1.0);
+    color: #fff;
+    padding-left: 3em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.charts-side {
+    padding-right: 4em !important;
+    padding-top:2em;
+}
+
+/* REGISTER FORM */
+
+.inline-field input,
+.inline-field label {
+  display: inline-block;
+  margin-bottom: 0; /* I added this after I posted my reply */
+  vertical-align: middle; /* Fixes any weird issues in Firefox and IE */
+}
+
 
 /*table {
     border-spacing: 0 10px !important;
@@ -440,6 +514,12 @@ label {
 .trigger-btn {
     display: inline-block;
     margin: 100px auto;
+}
+
+.chart-col {
+    margin: auto 2em auto 2em;
+    padding-top:3em;
+    padding-right:3em;
 }
 
 

@@ -21,9 +21,13 @@ setTimeout(function run() {
 // Requiring Routes ============================================================
 const ordersRoutes              = require("./routes/orders");
 const indexRoutes                 = require("./routes/index");
+const usersRoutes               = require("./routes/users");
     
 // Load Keys ===================================================================
-const keys                  = require('./config/keys');    
+// const keys                  = require('./config/keys');    
+
+// Use mongoURI for production (Heroku - ) 
+const mongoURI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}.mlab.com:37357/${process.env.MONGO_DATABASE}`;
     
 // Map global promises
 mongoose.Promise            = global.Promise;
@@ -76,6 +80,7 @@ app.use(function(req, res, next){
 
 app.use(indexRoutes);
 app.use("/orders", ordersRoutes);
+app.use("/users", usersRoutes);
 
 
 const port = process.env.PORT || 5000;

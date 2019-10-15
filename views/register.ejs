@@ -1,57 +1,51 @@
 <% include partials/header %>
 
-<!--<div class = "container">
-        <div class = "row">
-            <h1 style="text-align: center;">Register</h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/register" method="POST">
-                    
-                            <div class = "form-group">
-                                <input class="form-control" type="username" name="username" placeholder="username">
-                            </div>
-                             <div class = "form-group">
-                                <input class="form-control" type="password" name="password" placeholder="password">
-                            </div>
-
-                            <div class = "form-group">
-                                <button class="btn btn-lg btn-default btn-primary btn-block">Submit</button>
-                            </div>
-
-                    <a href="/">Back to Main</a>
-                </form>
-            </div>
-        </div>
-    </div>-->
+<div class="container">
     
-    <div class = "panel panel-primary" style="width:40%; margin: 25px auto;">
-        <div class = "panel-heading">
-            <h1 class="panel-title"><h1 style="text-align: center">Willrich Precision</h1></h1>
-            <h2 style="text-align: center; margin-top: 1px">Order Management</h2>
-            <p style="text-align: center; margin-top: 5px">by TruSponse Custom Solutions</p>
-        </div>
-        <div class="panel-body" style="background-color: #e8e9ea">
-            <h3 style="text-align: center">New User Registration</h3>
-            <div style="width: 40%; margin: 25px auto">
-                <form action="/login" method="POST">
-                    
+        <header class="jumbotron" style="margin-top: 5.25em">
+            <div class = "container-jumbo">
+                <h1>OrderSponse</h1>
+                <h3 style="text-align: center">New User Registration</h3>
+                    <div class="login-panel" style="width: 30%; margin: 25px auto">
+                        <form action="/login" method="POST">
                             <div class = "form-group row">
-                                <div class="col-m-8">
+                            
+                                    <input class="form-control" type="text" name="firstname" placeholder="first name">
+                                
+                            </div>
+                            <div class = "form-group row">
+                            
+                                    <input class="form-control" type="text" name="lastname" placeholder="last name">
+                                
+                            </div>
+                            <div class = "form-group row">
+                            
                                     <input class="form-control" type="text" name="username" placeholder="username">
-                                </div>
+                                
                             </div>
                              <div class = "form-group row">
-                                <div class="col-m-8">
+                               
                                     <input class="form-control" type="password" name="password" placeholder="password">
-                                </div>
+
                             </div>
-                            <div class = "form-group">
-                                <button class="btn btn-lg btn-default btn-primary btn-block">Submit</button>
+                            
+                            <div class="form-group row">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="admin" name="isAdmin">
+                                <label class="form-check-label" for="admin">administrative priviledges</label>
                             </div>
-                    <a href="/">Back to Main</a><br>
-                    <a href="/login">Current User Login</a>
-                </form>
-            </div>
-        </div>
+                            </div>
+                                <div class = "form-group row">
+                                        <button class="btn btn-lg btn-default btn-primary btn-block btn-login"><h5 style="padding-top:5px;"> Register</h5></button>
+                                        <!--<button class="btn btn-lg btn-default btn-primary"><i class="fa fa-sign-in fa-2x"></i></button>-->
+                                    </div>
+                                    <!--<a href="/">Back to Main</a><br>-->
+                                    <!--<a href="/register">New User</a>-->
+                                </form>
+                            </div>
+                    </div>
+                </header>
+                </div>
 </div>
 
 <% include partials/footer %>
