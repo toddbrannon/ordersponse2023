@@ -3,7 +3,7 @@ var router = express.Router();
 var User = require("../models/user.js");
 
 // Load Keys ===================================================================
-//const keys = require('../config/keys');
+//const keys = require('./config/keys');
 
 
 // INDEX ROUTE - show all users

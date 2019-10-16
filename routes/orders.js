@@ -3,7 +3,7 @@ var router = express.Router();
 var Order = require("../models/order.js");
 
 // Load Keys ===================================================================
-// const keys = require('../config/keys');
+// const keys = require('./config/keys');
 
 
 // INDEX ROUTE - show all orders
