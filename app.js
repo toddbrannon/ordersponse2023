@@ -27,7 +27,7 @@ const usersRoutes               = require("./routes/users");
 // const keys                  = require('./config/keys');    
 
 // Use mongoURI for production (Heroku - ) 
-const mongoURI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}.mlab.com:37357/${process.env.MONGO_DATABASE}`;
+const mongoURI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}.mlab.com:19406/${process.env.MONGO_DATABASE}`;
     
 // Map global promises
 mongoose.Promise            = global.Promise;
