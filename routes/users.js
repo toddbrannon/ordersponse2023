@@ -21,7 +21,7 @@ router.get("/", isLoggedIn, function(req, res) {
     });
 });
 
-// CREATE ROUTE - add new user to the DB
+// CREATE (REGISTER) ROUTE - add new user to the DB
 router.post("/register", isLoggedIn, function(req, res) {
     // get data from form and add to users array
     let firstname = req.body.firstname

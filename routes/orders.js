@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var Order = require("../models/order.js");
+const Rep = require("../models/rep");
 
 // Load Keys ===================================================================
 // const keys = require('./config/keys');
@@ -17,9 +18,24 @@ router.get("/", isLoggedIn, function(req, res) {
             res.render("orders", { orders: allOrders });
             //Test to see if this returns the number of records in the collection
             console.log(allOrders.length);
+            console.log("All orders rendered.")
         }
     });
 });
+
+// get values for rep select (dropdown) in new and edit views
+router.get("/getdata", (req, res) => {
+    Rep.find({}, (err, data) => {
+        if(err) {
+            console.log(err);
+            res.status(500).send("error retrieving data from the database")
+        } else {
+            console.log(data)
+            res.status(200).send(data)
+        }
+    })
+})
+
 
 // CREATE ROUTE - add new order to the DB
 router.post("/new", isLoggedIn, function(req, res) {

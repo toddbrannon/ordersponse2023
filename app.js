@@ -1,64 +1,56 @@
-var express                 = require("express"),
-    app                     = express(),
-    bodyParser              = require("body-parser"),
-    mongoose                = require("mongoose"),
-    flash                   = require("connect-flash"),
-    passport                = require("passport"),
-    LocalStrategy           = require("passport-local"),
-    passportLocalMongoose   = require("passport-local-mongoose"),
-    methodOverride          = require("method-override");
- //   seedDB                  = require("./seeds");
-    
+require('dotenv').config()
+const express = require("express")
+const app = express()
+const bodyParser = require("body-parser")
+const mongoose = require("mongoose")
+const User = require("./models/user")
+const Rep = require("./models/rep")
+const passport = require("passport")
+const LocalStrategy = require("passport-local")
+const flash = require("connect-flash")
+const passportLocalMongoose = require("passport-local-mongoose")
+const methodOverride = require("method-override")
+const createError = require('http-errors')
+const logger = require('morgan');
 
-//seedDB();
+const port = process.env.PORT || 5000;
 
-/*let i = 1;
-setTimeout(function run() {
-  seedDB(i);
-  setTimeout(run, 60000);
-}, 60000);*/
+// app.use(logger('dev'));
 
-// Requiring Routes ============================================================
-const ordersRoutes              = require("./routes/orders");
-const indexRoutes                 = require("./routes/index");
-const usersRoutes               = require("./routes/users");
-    
-// Load Keys ===================================================================
-// const keys                  = require('./config/keys');    
-
-// Use mongoURI for production (Heroku - ) 
-const mongoURI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}.mlab.com:19406/${process.env.MONGO_DATABASE}`;
-    
-// Map global promises
-mongoose.Promise            = global.Promise;
-
-// Mongoose Connect ============================================================
-
-/*mongoose.connect(keys.mongoURI, {
-    useMongoClient: true
-})*/
-
-mongoose.connect(mongoURI, {
-    useMongoClient: true
-})
-
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log(err));
-
-//==============================================================================
 app.use(express.static('public'));
 
-
-app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.use(methodOverride("_method"));
 app.use(flash());
-//==============================================================================
-// REQUIRE MODELS
-//==============================================================================
-const User = require("./models/user");
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+// Requiring Routes ============================================================
+const ordersRoutes = require("./routes/orders");
+const indexRoutes = require("./routes/index");
+    
+// Mongoose Connect ============================================================
+
+// MongoDB Atlas Prod
+
+const mongoURI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@trusponse.ugdwe.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`   
+
+// Map global promises
+mongoose.Promise = global.Promise;
+
+// mongoose.connect("mongodb://localhost/trusponse_notify");
+// Below updated 3/17/2021
+const connection = mongoose
+    .connect(mongoURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+     })
+    .then(() => console.log('connected to the wpi-dev mongodbatlas collection...'))
+    .catch(err => console.log(err)
+);
+
 
 //==============================================================================
 // PASSPORT CONFIGURATION
@@ -82,12 +74,11 @@ app.use(function(req, res, next){
     res.locals.success = req.flash("success");
     next();
 });
+//=  Routes  ===================================================================
 
 app.use(indexRoutes);
 app.use("/orders", ordersRoutes);
-app.use("/users", usersRoutes);
 
-
-const port = process.env.PORT || 5000;
-
-app.listen(port, () => console.log(`WPI TruSponse server started on port ${port}`));
+app.listen(port, () => {
+    console.log(`WPI TruSponse server started on port ${port}`);
+});

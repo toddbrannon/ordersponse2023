@@ -3,6 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Arimo|Arsenal|Caveat|Days+One|Economica|Exo|Gochi+Hand|Harmattan|Kalam|Kaushan+Script|Lato|Mr+Dafoe|Orienta|Oswald|Pavanam|Permanent+Marker|Raleway|Roboto|Roboto+Condensed|Satisfy|Source+Sans+Pro');
 
+
+/* NEW NAV 03/19/2021 */
+
+:root {
+  --navbar-bg-color: hsl(0, 0%, 15%);
+  --navbar-text-color: hsl(0, 0%, 85%);
+  --navbar-text-color-focus: white;
+  --navbar-bg-contrast: hsl(0, 0%, 25%);
+}
+
 /*Spinner-1*/
 
 .spinner-1:before {
@@ -84,7 +94,7 @@ header {
 }
 
 header .logo {
-    font-family: "Economica", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #fff !important;
     height: 50px;
     line-height: 50px;
@@ -171,6 +181,13 @@ header nav ul li a .current {
 .navbar-collapse {
     background-color: inherit;
 }
+
+.navbar-links {
+  list-style-type: none;
+
+}
+
+
 
 
 /*a {
